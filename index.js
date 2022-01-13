@@ -176,14 +176,22 @@ Use the filterByWord function below to do the following:
 
   For example: filterByWord(originalFlavors, "Chocolate") should return ["Chocolate", "Chocolate Almond", "Chocolate Chip", "Chocolate Fudge", "Chocolate Mint", "Chocolate Ribbon"]
 
-  HINT - you can use the .includes method to help you solve this
+  HINT - you can use the .includes method to help you solve this[i]
 
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 // 2 params array, string
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array,flavor){
+  let filteredArray = []
+  for(let i = 0; i<array.length;i++){
+    if(array[i].includes(flavor)){
+      filteredArray.push(array[i])
+    }
+  }
+  return filteredArray
 }
+console.log('task 7', filterByWord(originalFlavors, 'Chocolate'))
+
 //create new array called filteredArray to push values to;loop thru original array and check each item; if item includes the given string push to filteredArrays
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
