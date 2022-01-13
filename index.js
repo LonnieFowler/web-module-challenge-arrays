@@ -64,9 +64,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 //1 paramater array
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(array){
+  if(array.length === 31){
+    return true;
+  }else{
+    return false;
+  }
 }
+console.log('task 2:', is31Flavors(originalFlavors))
 //check length of arra is to 31, if yes return true, if not return false
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
