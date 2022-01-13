@@ -87,9 +87,11 @@ Use the addFlavor function below to do the following:
 */
 
 //2 params array,flavor
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, string){
+ array.unshift(string)
+ return array
 }
+console.log('task 3', addFlavor(originalFlavors, 'Rianbow Sherbert'))
 //use .unshift to add flavor to front of array then return the array
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -103,9 +105,11 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 //1 param array
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array){
+  array.pop();
+  return array;
 }
+console.log('task 4', removeLastFlavor(originalFlavors))
 //use .pop to remove last item, then return the array
 
 
@@ -120,9 +124,10 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 //2 params array,index
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array, number){
+  return array[number]
 }
+console.log('task 5',getFlavorByIndex(originalFlavors, 7))
 //if i passed in original flavors and return array[index]
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -140,9 +145,19 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 //2 params array, index
-function removeFlavorByName(/*your code here*/){
- //loop thru array; write conditional to see if index matches given flavor;if it does remove it;return the array outside of the loop
+function removeFlavorByName(array,flavor){
+  for(let i =0; i< array.length;i++ ){
+    if(array[i] === flavor){
+      array.splice(i,1)
+    }
+  }
+  return array
 }
+console.log('task 6 ', removeFlavorByName(originalFlavors, 'Rocky Road'))
+
+
+  //loop thru array; write conditional to see if index matches given flavor;if it does remove it;return the array outside of the loop
+
 
 
 
